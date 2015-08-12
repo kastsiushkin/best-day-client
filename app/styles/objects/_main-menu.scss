@@ -1,0 +1,187 @@
+.MainMenu {
+  @include grid-media-query('desk') {
+    background-color: #131a21;
+  }
+}
+
+.MainMenu__items {
+  @include display(flex);
+  @include flex-direction(column);
+
+  @include grid-media-query('portable') {
+    @include justify-content(space-between);
+  }
+  @include grid-media-query('desk') {
+    @include flex-direction(row);
+  }
+}
+
+.MainMenu__menuClose {
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color: #c1c7cc;
+
+  @include grid-media-query('desk') {
+    display: none;
+  }
+}
+
+.MainMenu__logo {
+  font-weight: bold;
+  color: #fff;
+  padding: 0.6em 0em;
+  text-transform: uppercase;
+
+  @include grid-media-query('desk') {
+    font-size: $f-largest;
+    margin: 0em 3em 0em 5em;
+  }
+
+  @include grid-media-query('portable') {
+    font-size: 1.50em;
+    padding: 0.7em;
+    margin-top: 1.2em;
+    color: #000;
+  }
+}
+
+.MainMenu__avatar {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 1em;
+  margin-left: 1em;
+  vertical-align: middle;
+}
+
+.MainMenu__divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0,0,0,0.04);
+
+  @include grid-media-query('desk') {
+    display: none;
+  }
+}
+
+.MainMenu__dividerVertical {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0em 1em;
+  height: 20px;
+  width: 1px;
+  background-color: rgba(255,255,255,0.15);
+
+  @include grid-media-query('portable') {
+    display: none;
+  }
+}
+
+.MainMenu__item {
+  font-weight: bold;
+  padding: 1em;
+
+  @include grid-media-query('portable') {
+    font-size: $f-largest;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+
+    a {
+      &:link, &:active, &:visited, &.active {
+        color: $c-menu-text;
+      }
+      &:hover {
+        color: $c-menu-text-active;
+      }
+    }
+  }
+
+  @include grid-media-query('desk') {
+    text-transform: uppercase;
+    font-size: $f-small;
+    width: 7em;
+    vertical-align: middle;
+
+    a {
+      &:link, &:active, &:visited, &.active {
+        color: $c-menu-text-desktop;
+      }
+      &:hover {
+        color: $c-menu-text-active;
+      }
+    }
+  }
+}
+
+.MainMenu__signOut {
+  position: absolute;
+  bottom: 0.2em;
+  font-weight: bold;
+  padding: 1.2em;
+  font-size: $f-medium;
+  height: 1em;
+  padding: 1.8em;
+
+  @include grid-media-query('desk') {
+    display: none;
+  }
+
+  a {
+    &:link {
+      color: $c-menu-text-small;
+    }
+    &:active {
+      color: $c-menu-text;
+    }
+    &:visited {
+      color: $c-menu-text-small;
+    }
+    &:hover {
+      color: $c-menu-text-active;
+    }
+  }
+}
+
+.MainMenu__userInfo {
+  color: $c-menu-text-desktop;
+  margin-top: 1em;
+  font-weight: bold;
+  position: absolute;
+  right: 7em;
+  font-size: $f-small;
+
+  @include grid-media-query('portable') {
+    display: none;
+  }
+}
+
+.MainMenu__count {
+  font-size: $f-large;
+  font-weight: bold;
+  color: $c-menu-count-text;
+  background-color: $c-menu-count-bg;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3em;
+  top: -0.25em;
+
+  @include grid-media-query('desk') {
+    display: none;
+  }
+}
+
+.MainMenu__alertsIcon {
+  font-size: 1.3em;
+}
+
+.MainMenu__countPlain {
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  color: $c-menu-count-plain-text;
+  padding: 0em;
+  top: 0em;
+
+  @include grid-media-query('desk') {
+    display: none;
+  }
+}

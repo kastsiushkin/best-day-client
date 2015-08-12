@@ -1,0 +1,124 @@
+// ------------  ------------  ------------
+// CSSW Grids
+// ------------  ------------  ------------
+// Default breakpoints, which can be overridden here
+$breakpoints: (
+  'palm' '(max-width: 29.99rem)', // 479px
+  'palm-plus' '(min-width: 30rem)', // 480px
+  'handheld-height' '(max-width: 52.24rem) and (min-height: 26.25rem)',
+  'desk-height' '(min-width: 52.25rem) and (min-height: 42rem)',
+  'palm-to-desk' '(min-width: 30rem) and (max-width: 52.24rem)', // 480-835
+  'lap' '(min-width: 30.01rem) and (max-width: 39.99rem)', // 480 - 639
+  'double' '(min-width: 40rem) and (max-width: 52.24rem)', // 640 - 835
+  'double-plus' '(min-width: 40rem)', // >= 640
+  'portable' '(max-width: 52.24rem)', // <= 834
+  'desk' '(min-width: 52.25rem)', // >= 835
+  'split' '(min-width: 52.24rem) and (max-width: 64rem)', // 835-1024
+  'landscape' '(min-width: 64.25rem) and (max-width: 80rem)', // 1024-1280
+  'monitor' '(min-width: 52.25rem) and (max-width: 80rem)', // 835-1280
+  'max' '(min-width: 80rem)' // >= 1280
+);
+
+// Default breakpoints, which can be overridden here
+$breakpoint-has-widths: ('palm', 'lap', 'double', 'double-plus', 'portable', 'desk', 'split', 'landscape', 'monitor', 'max')!default;
+$breakpoint-has-push: ('palm', 'lap', 'double', 'double-plus', 'portable', 'desk', 'split', 'landscape', 'max')!default;
+$breakpoint-has-pull: ('palm', 'lap', 'double', 'double-plus', 'portable', 'desk', 'split', 'landscape', 'max')!default;
+
+// Set gutter width for CSSWGrids
+$gutter: 0.75rem; //12px
+
+
+
+
+// ------------  ------------  ------------
+// default pads and margins for pad/margin helpers
+$default-pad: 1.250em;
+$default-margin: 1.250em;
+$site-container-max-width: 75em; /* 1200/16 */
+
+$canvas-shift: 80%;
+$canvas-shift-large: 50%;
+
+$global-transition-duration: 250ms;
+
+//
+$canvas-footer-height: 4em;
+$canvas-header-height: 3.125em;
+
+//
+$canvas-main-menu-width: 16rem;
+
+// Font Base
+$f-sans-serif: Arial, Helvetica, sans-serif;
+$f-serif: Georgia, Times, 'Times New Roman', serif;
+$f-fixed: 'Bitstream Vera Sans Mono', Monaco, 'Andale Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+$f-table: 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', Verdana, + $f-sans-serif;
+$font-icon-symbols: 'Beatport Symbols', serif;
+
+// Font Sizes
+$f-smallest: 0.5em;
+$f-small: 0.625em;
+$f-medium: 0.75em;
+$f-large: 0.875em;
+$f-largest: 1em;
+
+
+
+
+// ------------  ------------  ------------
+// LAYERING / Z-INDEX
+// ------------  ------------  ------------
+$z-index-modal-content: 300;
+$z-index-modal-cover: 290;
+$z-index-main-menu: 280;
+$z-index-main-header-fixed: 270;
+$z-index-main-footer-fixed: 260;
+
+
+
+// ------------  ------------  ------------
+// COLORS
+// ------------  ------------  ------------
+
+// Global Colors
+$c-grey: #B3B3B3;
+$c-grey-light: #e7e7e7;
+$c-grey-medium: #808285;
+$c-grey-dark: #58595B;
+$c-outline-grey: #E7E7E7;
+$c-blue: #0079FF;
+$c-blue-dark: #3A4857;
+$c-input-focus: $c-blue;
+$c-input-error: #FF6A67;
+$c-input-valid: #18D384;
+
+
+
+// Site BG
+$c-site-bg: #e7e7e7;
+
+// Canvas Content Container
+$c-canvas-content-bg: #fff;
+
+// Canvas Footer
+$c-canvas-footer-bg: #999;
+
+// Main Menu
+$c-menu-username-text: #fff;
+$c-main-menu-bg: #fff;
+$c-menu-text: #000;
+$c-menu-text-desktop: #fff;
+$c-menu-text-small: #888;
+$c-menu-toggle: #fff;
+$c-menu-keyline: #fff;
+$c-menu-text-active: #0079FF;
+$c-menu-count-text: #fff;
+$c-menu-count-bg: #b6bcc3;
+$c-menu-count-plain-text: #0079ff;
+
+// Main Header
+$c-main-header-bg: #1B232C;
+$c-main-header-text: #FFF;
+
+// Salary Status
+$c-salary-status-negative: #FF4100;

@@ -1,0 +1,32 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,700,500,300,900');
+
+@mixin f-roboto {
+  font-family: 'Roboto', $f-sans-serif;
+  font-weight: 400;
+}
+
+@mixin f-roboto-light {
+  font-family: 'Roboto', $f-sans-serif;
+  font-weight: 300;
+}
+
+@mixin f-roboto-medium {
+  font-family: 'Roboto', $f-sans-serif;
+  font-weight: 500;
+}
+
+@mixin f-roboto-bold {
+  font-family: 'Roboto', $f-sans-serif;
+  font-weight: 700;
+}
+
+@mixin f-roboto-ultra-bold {
+  font-family: 'Roboto', $f-sans-serif;
+  font-weight: 900;
+}
+
+// icon Symbols
+@mixin icon-symbols {
+  font-family: $font-icon-symbols;
+  font-weight: normal;
+}

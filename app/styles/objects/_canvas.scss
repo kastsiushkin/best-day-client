@@ -1,0 +1,157 @@
+.Canvas {
+  position: relative;
+  height: 100%;
+
+  &.Grid--max-width,
+  .Grid--max-width {
+    display: block;
+    box-sizing: border-box;
+    width: initial;
+    max-width: $site-container-max-width;
+    margin: 0 auto;
+  }
+}
+
+.Canvas__header{
+  box-sizing: border-box;
+  position: relative;
+
+  height: $canvas-header-height;
+  z-index: $z-index-main-header-fixed;
+}
+
+.Canvas__content{
+  box-sizing: border-box;
+  position: relative;
+
+  @include calc(min-height, '100% - #{$canvas-footer-height} - #{$canvas-header-height}');
+
+  @include transition(all $global-transition-duration ease-in-out);
+
+  background: $c-canvas-content-bg;
+
+  padding-bottom: 2em;
+}
+
+.Canvas__footer {
+  box-sizing: border-box;
+  position: relative;
+
+  height: $canvas-footer-height;
+
+  background: $c-canvas-footer-bg;
+}
+
+.Canvas__menu {
+  box-sizing: border-box;
+  width: 100%;
+
+  z-index: $z-index-main-menu;
+
+  background: $c-main-menu-bg;
+
+  // When scren is small hide the menu to the left
+  @include grid-media-query('portable') {
+    overflow: hidden;
+    opacity: 1;
+
+    width: $canvas-main-menu-width + $gutter;
+    max-width: $canvas-main-menu-width + $gutter;
+    height: 100%;
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+
+    @include transition(all $global-transition-duration ease-in-out);
+    @include position(fixed, 0px 0px 0 0);
+    @include transform(translate3d(-100%, 0, 0))
+  }
+}
+
+.Canvas__modalContent {
+  overflow-x: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+
+  display: block;
+
+  position: fixed;
+  @include calc(left, '100% - $site-container-max-width');
+  top: 0;
+  box-sizing: border-box;
+  height: 100%;
+  max-width: $site-container-max-width;
+  margin: 0 auto;
+  z-index: $z-index-modal-content;
+
+  pointer-events: none;
+
+  @include transition(opacity $global-transition-duration ease-in-out);
+}
+
+.Canvas__modalCover {
+  visibility: hidden;
+  opacity: 0;
+
+  background-color: rgba(0,0,0,0.5);
+
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: $z-index-modal-cover;
+
+  pointer-events: none;
+
+  @include transition(opacity $global-transition-duration ease-in-out);
+}
+
+.Canvas--modalEnabled {
+  .Canvas__modalCover {
+    cursor: pointer;
+
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+
+  .Canvas__modalContent {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+}
+
+.Canvas--menuEnabled {
+  .Canvas__content {
+    @include grid-media-query('portable') {
+      overflow: hidden;
+    }
+  }
+
+  .Canvas__menu {
+    @include grid-media-query('portable') {
+      opacity: 1;
+      overflow-y:auto;
+
+      width: 100%;
+      left: 0;
+
+      @include transform(translate3d(0, 0, 0));
+    }
+  }
+
+  .Canvas__modalCover {
+    cursor: pointer;
+    z-index: $z-index-main-menu - 1;
+
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+}
