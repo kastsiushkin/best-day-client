@@ -6,7 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('days');
+  this.resource('days', function() {
+    this.resource('day', {path: '/:day_id'});
+  });
 });
 
 export default Router;

@@ -1,0 +1,21 @@
+<div class="Grid Grid--full">
+  <div class="Grid__item oneWhole">
+    <div class="DayCards">
+      {{#each day in model}}
+      <div class="DayCard">
+        {{#link-to 'day' day}}
+        <div class="DayCard__image">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+        </div>
+        <div class="DayCard__header">
+          {{day.name}}
+        </div>
+        <div class="DayCard__copy">
+          <p>{{day.description}}</p>
+        </div>
+        {{/link-to}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

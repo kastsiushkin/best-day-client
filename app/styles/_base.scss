@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: $c-site-bg;
+  color: $c-grey-medium;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.125em;
+}
+
+// Creates f-scale--1 to f-scale--40 to use as `em` scaling helpers
+$f-class-types: 40;
+$f-class-inc: 0.063em; // 1px
+@while $f-class-types > 0 {
+  .f-scale--#{$f-class-types} {
+    font-size: 1em + $f-class-inc * $f-class-types;
+  }
+  $f-class-types: $f-class-types - 1;
+}
