@@ -1,0 +1,151 @@
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.hidden-on-desk {
+  @include grid-media-query('desk') {
+    display: none;
+  }
+}
+
+.hidden-on-portable {
+  @include grid-media-query('portable') {
+    display: none;
+  }
+}
+
+.a-no-decoration {
+  border-bottom: none;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.h-text-center {
+  text-align: center;
+}
+.h-text-left {
+  text-align: left;
+}
+.h-text-right {
+  text-align: right;
+}
+
+
+.margin {
+  margin: $default-margin;
+}
+.margin-bottom {
+  margin-bottom: $default-margin;
+}
+.margin-top {
+  margin-top: $default-margin;
+}
+.margin-vertical {
+  margin-bottom: $default-margin;
+  margin-top: $default-margin;
+}
+.margin-right {
+  margin-right: $default-margin;
+}
+.margin-left {
+  margin-left: $default-margin;
+}
+.margin-horizontal {
+  margin-left: $default-margin;
+  margin-right: $default-margin;
+}
+
+.margin-bottom-half {
+  margin-bottom: $default-margin / 2;
+}
+.margin-top-half {
+  margin-top: $default-margin / 2;
+}
+.margin-vertical-half {
+  margin-bottom: $default-margin / 2;
+  margin-top: $default-margin / 2;
+}
+.margin-right-half {
+  margin-right: $default-margin / 2;
+}
+.margin-left-half {
+  margin-left: $default-margin / 2;
+}
+.margin-horizontal-half {
+  margin-left: $default-margin / 2;
+  margin-right: $default-margin / 2;
+}
+.margin-none {
+  margin: 0;
+}
+
+.pad {
+  padding: $default-pad;
+}
+.pad-bottom {
+  padding-bottom: $default-pad;
+}
+.pad-top {
+  padding-top: $default-pad;
+}
+.pad-vertical {
+  padding-top: $default-pad;
+  padding-bottom: $default-pad;
+}
+.pad-left {
+  padding-left: $default-pad;
+}
+.pad-right {
+  padding-right: $default-pad;
+}
+.pad-horizontal {
+  padding-left: $default-pad;
+  padding-right: $default-pad;
+}
+
+.pad-half {
+  padding: $default-pad / 2;
+}
+.pad-bottom-half {
+  padding-bottom: $default-pad / 2;
+}
+.pad-top-half {
+  padding-top: $default-pad / 2;
+}
+.pad-vertical-half {
+  padding-top: $default-pad / 2;
+  padding-bottom: $default-pad / 2;
+}
+.pad-left-half {
+  padding-left: $default-pad / 2;
+}
+.pad-right-half {
+  padding-right: $default-pad / 2;
+}
+.pad-horizontal-half {
+  padding-left: $default-pad / 2;
+  padding-right: $default-pad / 2;
+}
+.pad-none {
+  padding: 0;
+}
+
+
+.pos-inline {
+  display: inline;
+}
+.pos-block {
+  display: block;
+}

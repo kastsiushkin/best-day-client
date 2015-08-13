@@ -1,7 +1,7 @@
-<div class="Grid Grid--full">
+<div class="Grid Grid--full pad-top-half">
   <div class="Grid__item oneWhole">
     <div class="DayCards">
-      {{#each day in model}}
+      {{#each model as |day|}}
       <div class="DayCard">
         {{#link-to 'day' day}}
         <div class="DayCard__image">
