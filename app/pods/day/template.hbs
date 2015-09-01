@@ -1,3 +1,8 @@
-Day template
-
-{{model.name}}
+<div class="Grid Grid--full pad-top-half">
+  <h1 class="h-text-center">{{model.name}}</h1>
+  <div class="Grid__item oneHalf">
+    <p>{{model.description}}</p>
+    {{#link-to 'activities' model}} Activities {{/link-to}}
+    {{outlet}}
+  </div>
+</div>

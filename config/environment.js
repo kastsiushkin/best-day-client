@@ -24,9 +24,20 @@ module.exports = function(environment) {
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiHostname = 'http://localhost:3000',
+    ENV.contentSecurityPolicy = {
+      'default-src': "none",
+      'script-src': "'self' 'unsafe-inline'",
+      'font-src': "'self'",
+      'connect-src': "'self' ws://0.0.0.0:49152 ws://localhost:49152 http://localhost:3000",
+      'img-src': "'self' https://raw.githubusercontent.com",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'",
+      'frame-src': "none"
+    };
   }
 
   if (environment === 'test') {

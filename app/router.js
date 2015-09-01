@@ -6,8 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('days', function() {
-    this.resource('day', {path: '/:day_id'});
+  this.resource('days', {path: '/days'});
+  this.resource('day', {path: '/day/:day_id'}, function() {
+    this.resource('activities', function(){});
   });
 });
 

@@ -9,37 +9,43 @@ module.exports = function(app) {
           id: 1,
           name: 'San Francisco Sightseeing',
           description: 'Beautiful places in San Francisco',
-          address: 'San Francisco'
+          address: 'San Francisco',
+          activities: ["1","2","3","4"]
         },
         {
           id: 2,
           name: 'Kauai',
           description: 'Active day on Kauai',
-          address: 'Kauai, Hawaii'
+          address: 'Kauai, Hawaii',
+          activities: []
         },
         {
           id: 3,
           name: 'Los Angeles',
           description: 'Active day on Kauai',
-          address: 'Kauai, Hawaii'
+          address: 'Kauai, Hawaii',
+          activities: []
         },
         {
           id: 4,
           name: 'Maui',
           description: 'Active day on Kauai',
-          address: 'Kauai, Hawaii'
+          address: 'Kauai, Hawaii',
+          activities: []
         },
         {
           id: 5,
           name: 'Oahu',
           description: 'Active day on Kauai',
-          address: 'Kauai, Hawaii'
+          address: 'Kauai, Hawaii',
+          activities: []
         },
         {
           id: 6,
           name: 'Big Island',
           description: 'Active day on Kauai',
-          address: 'Kauai, Hawaii'
+          address: 'Kauai, Hawaii',
+          activities: []
         }
       ]
     });
