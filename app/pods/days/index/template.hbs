@@ -3,7 +3,7 @@
     <div class="DayCards">
       {{#each model as |day|}}
       <div class="DayCard">
-        {{#link-to 'day' day}}
+        {{#link-to 'day' day.id}}
         <div class="DayCard__image">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
         </div>

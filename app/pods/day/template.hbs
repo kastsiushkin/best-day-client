@@ -5,4 +5,18 @@
     {{#link-to 'activities' model}} Activities {{/link-to}}
     {{outlet}}
   </div>
+  <div class="">
+    <button {{action "delete" model}}>Delete Day</button>
+  </div>
+  {{#each model.activities as |activity|}}
+  1  {{activity.name}}
+  {{/each}}
+  <br><br>
+  1{{model}}<br>
+  2{{model.day}}<br>
+  3{{model.activities}}<br>
+  4{{model.included}}<br>
+  5{{activities}}<br>
+  6{{day}}<br>
+  7{{days}}<br>
 </div>
