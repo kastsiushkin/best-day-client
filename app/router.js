@@ -6,11 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('days', {path: '/days'}, function() {
+  this.route('days', {path: '/days'}, function() {
     this.route('new');
   });
-  this.resource('day', {path: '/days/:day_id'}, function() {
-    this.resource('activities', function(){});
+  this.route('day', {path: '/days/:day_id'}, function() {
+    this.route('activities', { resetNamespace: true })
   });
 });
 
